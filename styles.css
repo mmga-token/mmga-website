@@ -1,0 +1,230 @@
+/* Font families:
+   Headings: Orbitron, sans-serif
+   Body: Montserrat, sans-serif
+*/
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background: #1b1b1b;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header (Hero Section) */
+.hero {
+  position: relative;
+  min-height: 75vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)),
+              url('bg.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+}
+
+.site-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6f61; /* Mars-like accent color */
+}
+
+.buy-btn {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #ff8f7f;
+}
+
+.hero-content {
+  text-align: center;
+  margin: auto auto 60px auto;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.hero-logo {
+  margin-top: 20px;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #ddd;
+}
+
+/* Main Sections */
+main {
+  padding: 60px 20px;
+}
+
+main section {
+  max-width: 800px;
+  margin: 80px auto;
+  background: #292929;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+main h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.community-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.community-links a {
+  color: #ff6f61;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.community-links a:hover {
+  color: #ff8f7f;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-logo {
+    max-width: 200px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .buy-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  main section {
+    margin: 60px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-logo {
+    max-width: 150px;
+  }
+}
